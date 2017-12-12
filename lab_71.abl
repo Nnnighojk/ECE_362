@@ -1,0 +1,13 @@
+MODULE lab_71
+TITLE '8-bit Shift Register'
+DECLARATIONS
+clock pin 1;
+serial_in pin 2;
+!q0..!q9 pin 14..23 istype 'reg';
+EQUATIONS
+[q1..q9] := [q0..q8];
+q0 := serial_in;
+[q0..q9].clk = clock; 
+
+END 
+
